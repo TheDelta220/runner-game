@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://clddibwanvslj"]
+
+[ext_resource type="Texture2D" uid="uid://ct0328ytvmirj" path="res://assets/Background/IMG_6056.png" id="1_bkp1e"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(3513.46, 0)
+autoscroll = Vector2(-145, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(1760.38, 326.92)
+scale = Vector2(0.67031, 0.666832)
+texture = ExtResource("1_bkp1e")

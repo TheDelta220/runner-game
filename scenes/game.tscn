@@ -1,27 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyk7uddthwoxf"]
+[gd_scene load_steps=5 format=3 uid="uid://cyk7uddthwoxf"]
 
 [ext_resource type="PackedScene" uid="uid://w74frchaorgq" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://clddibwanvslj" path="res://scenes/background.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://c4jcw18mqvf61" path="res://scenes/parallax_background.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dfyk5cxmf7n8g" path="res://scenes/hud.tscn" id="3_lnu2h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
-distance = -37.0
+distance = -34.3353
 
 [node name="Game" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(112, 91)
-zoom = Vector2(4, 4)
-
-[node name="Background" parent="Camera2D" instance=ExtResource("2_yqjtg")]
-z_index = -1
-position = Vector2(-145, -83)
-scale = Vector2(0.255, 0.255)
+position = Vector2(580, 323)
+scale = Vector2(2.34, 2.34)
 
 [node name="player" parent="Camera2D" instance=ExtResource("1_uwrxv")]
-position = Vector2(-81, 76)
+position = Vector2(-177.35, 128.632)
+scale = Vector2(2.34, 2.34)
+
+[node name="ParallaxBackground" parent="Camera2D" instance=ExtResource("2_lnu2h")]
+offset = Vector2(-10.98, -5.625)
+scale = Vector2(1.002, 1.002)
+transform = Transform2D(1.002, 0, 0, 1.002, -10.98, -5.625)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(88, 133)
+position = Vector2(88, 136.525)
+scale = Vector2(2.34, 2.34)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 136.525)
+scale = Vector2(2.34, 2.34)
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="Hud" parent="." instance=ExtResource("3_lnu2h")]
+offset_left = 0.0
+offset_top = 9.0
+offset_right = 287.0
+offset_bottom = 171.0

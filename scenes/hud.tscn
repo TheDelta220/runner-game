@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfyk5cxmf7n8g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oo0fn"]
+font_size = 78
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -32.0
+offset_top = 11.0
+offset_right = 255.0
+offset_bottom = 173.0
+
+[node name="distance" type="Label" parent="."]
+layout_mode = 2
+offset_left = 32.0
+offset_top = -10.0
+offset_right = 166.0
+offset_bottom = 97.0
+text = "000"
+label_settings = SubResource("LabelSettings_oo0fn")
+vertical_alignment = 1
+uppercase = true

@@ -1,23 +1,23 @@
 [gd_scene load_steps=9 format=3 uid="uid://w74frchaorgq"]
 
 [ext_resource type="Script" uid="uid://bgsbhp7uatn4w" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://37kamblecqwm" path="res://assets/Idle1.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://8xje60b81vs1" path="res://assets/Running.png" id="2_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_g2els")
-region = Rect2(7, 76, 264, 561)
+region = Rect2(80, 115, 482, 633)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("2_g2els")
-region = Rect2(271, 76, 264, 561)
+region = Rect2(696, 115, 482, 633)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
 atlas = ExtResource("2_g2els")
-region = Rect2(535, 76, 264, 561)
+region = Rect2(1312, 115, 482, 633)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("2_g2els")
-region = Rect2(799, 76, 264, 561)
+region = Rect2(1928, 115, 482, 633)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tuyoq"]
 animations = [{
@@ -46,12 +46,12 @@ height = 44.0
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8.9407e-08, -23)
-scale = Vector2(0.0803741, 0.080374)
+position = Vector2(1.81492, -17.2808)
+scale = Vector2(0.0879049, 0.0875804)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.967596
+frame_progress = 0.584424
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -22)
